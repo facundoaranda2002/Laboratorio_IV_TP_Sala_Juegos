@@ -88,6 +88,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "tpsalajuegos:build:production",
+              "serveTarget": "tpsalajuegos:serve:production"
+            },
+            "development": {
+              "buildTarget": "tpsalajuegos:build:development",
+              "serveTarget": "tpsalajuegos:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

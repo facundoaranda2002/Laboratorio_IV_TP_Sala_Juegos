@@ -1,0 +1,18 @@
+<body>
+    <header>
+        <h2>Registro</h2>
+    </header>
+    <main>
+        <form id="login_form" class="form_class">
+            <div class="form_div">
+                <label>Username:</label>
+                <input class="field_class" name="login_txt" type="text" [(ngModel)]="username" placeholder="Insira o seu login" autofocus>
+                <label>Mail:</label>
+                <input class="field_class" name="login_txt" type="text" [(ngModel)]="email" placeholder="Insira o seu login" autofocus>
+                <label>Password:</label>
+                <input id="pass" class="field_class" name="password_txt" type="password"  [(ngModel)]="password" placeholder="Insira a sua senha">
+                <button class="submit_class" type="submit" form="login_form" (click)="onSubmit()">Entrar</button>
+            </div>
+        </form>
+    </main>
+</body>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tp2024-1ed38": {
+      "hosting": {
+        "tpsalajuegos": [
+          "tp2024-1ed38"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tp2024-1ed38"
+  }
+}
