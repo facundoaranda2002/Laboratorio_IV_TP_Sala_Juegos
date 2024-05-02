@@ -1,18 +1,21 @@
-<h1>TP SALA DE JUEGOS</h1>
-<button routerLink="home" class="btn btn-dark m-1">Home</button>
-<button routerLink="aboutme" class="btn btn-dark m-1">Quien soy</button>
+<div>
+  <h1>TP SALA DE JUEGOS</h1>
+  <div>
+    <button routerLink="home" class="btn btn-dark m-1">Home</button>
+    <button routerLink="aboutme" class="btn btn-dark m-1">Quien soy</button>
 
-@if(this.authService.currentUserSig() == null)
-{
-  <button routerLink="login" class="btn btn-dark m-1">Login</button>
-  <button routerLink="registro" class="btn btn-dark m-1">Registro</button>
-}
-@if(this.authService.currentUserSig())
-{
-  <button (click)="logout()" class="btn btn-dark m-1">Salir</button>
-}
- 
+    @if(this.authService.currentUserSig() == null)
+    {
+      <button routerLink="login" class="btn btn-dark m-1">Login</button>
+      <button routerLink="registro" class="btn btn-dark m-1">Registro</button>
+    }
+    @if(this.authService.currentUserSig())
+    {
+      <button (click)="logout()" class="btn btn-dark m-1">Salir</button>
+    }
+  </div>
+</div> 
 
-<hr />
+
 <router-outlet />
-<hr />
+

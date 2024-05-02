@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FirebaseAuthService } from '../../services/firebase-auth-service.service';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  authService = inject(FirebaseAuthService);
 }

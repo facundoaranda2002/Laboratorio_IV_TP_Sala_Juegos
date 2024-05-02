@@ -1,1 +1,7 @@
-<p>home works!</p>
+@if(this.authService.currentUserSig())
+  {
+    <h2>Bienvenido {{this.authService.currentUserSig()?.username}}</h2>
+  }
+  @else {
+    <h2>Bienvenido</h2>
+  }

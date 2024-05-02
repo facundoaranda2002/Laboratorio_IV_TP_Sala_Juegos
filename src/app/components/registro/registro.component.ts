@@ -20,6 +20,8 @@ export class RegistroComponent {
   username = "";
   password = "";
 
+  errorMessage: string = "";
+
 
   onSubmit(): void
   {
@@ -27,8 +29,7 @@ export class RegistroComponent {
       next:()=>{
       this.router.navigateByUrl('/')},
       error: ()=>{
-        const element: HTMLElement = this.elementRef.nativeElement.querySelector('#messageError');
-        element.style.display="block";
+        this.errorMessage = 'Credenciales invalidas o mail ya registrado';
       }
     })
   }

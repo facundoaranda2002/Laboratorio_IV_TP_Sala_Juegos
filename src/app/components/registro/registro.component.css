@@ -26,7 +26,8 @@ main {
     justify-content: center;
     height: 75vh;
     width: 100%;
-    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Mountains-1412683.svg/1280px-Mountains-1412683.svg.png) no-repeat center center;
+    min-height: 100vh;
+    background: url(https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70070000013765/01e3c858023ec84405cafda54e8995f8d0cbc89dc97bb20008bb57ea06ef7e97) no-repeat center center;
     background-size: cover;
 }
 .form_class {
@@ -96,4 +97,13 @@ footer > p > a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+.error-message {
+    background-color: #f8d7da; /* Color de fondo rojo claro */
+    color: #721c24; /* Color del texto rojo oscuro */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #f5c6cb; /* Borde rojo claro */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio inferior */
+    margin-top: 10px;
 }
