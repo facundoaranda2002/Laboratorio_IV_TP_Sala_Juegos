@@ -2,11 +2,12 @@ import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { FirebaseAuthService } from './services/firebase-auth-service.service';
+import { ChatComponent } from './components/chat/chat.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, LoginComponent],
+  imports: [RouterOutlet, RouterLink, LoginComponent, ChatComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

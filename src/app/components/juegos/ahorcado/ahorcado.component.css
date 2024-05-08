@@ -1,0 +1,68 @@
+div {
+    text-align: center;
+  }
+  
+  button {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .ahorcado-img {
+    height: 400px;
+  }
+  
+  button {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+
+
+  /* Estilos para el marcador de puntaje */
+.score {
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 5%; /* Estilo responsivo para ajustar el margen izquierdo */
+}
+
+.score-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.score-value {
+  font-weight: normal;
+}
+
+  .score-container {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.score {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.score-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.score-button:hover {
+    background-color: #0056b3;
+}

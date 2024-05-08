@@ -11,11 +11,13 @@
     }
     @if(this.authService.currentUserSig())
     {
-      <button (click)="logout()" class="btn btn-dark m-1">Salir</button>
+      <button (click)="logout()" routerLink="home" class="btn btn-dark m-1">Salir</button>
     }
   </div>
 </div> 
 
 
 <router-outlet />
+
+<!--<app-chat></app-chat>-->
 

@@ -1,7 +1,13 @@
 @if(this.authService.currentUserSig())
   {
     <h2>Bienvenido {{this.authService.currentUserSig()?.username}}</h2>
+    <button routerLink="/mayormenor" class="btn btn-dark m-1">Mayor Menor</button>
+    <button routerLink="/ahorcado" class="btn btn-dark m-1">Ahorcado</button>
+
   }
   @else {
     <h2>Bienvenido</h2>
   }
+
+
+

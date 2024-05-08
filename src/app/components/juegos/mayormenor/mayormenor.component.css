@@ -1,0 +1,114 @@
+/* Estilos generales */
+.container {
+    text-align: center;
+    margin-top: 20px;
+    max-width: 800px; /* Establece un ancho máximo para el contenedor */
+    margin: 8% auto; /* Centra el contenedor y agrega espacio superior */
+    padding: 10px;
+}
+
+/* Estilos para la carta */
+.carta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta img {
+    max-width: 200px;
+    max-height: 300px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin: 5px; /* Estilo responsivo para separar las cartas en pantallas pequeñas */
+}
+
+/* Estilos para los botones */
+button.btn {
+    font-size: 40px;
+    padding: 10px 20px;
+    margin: 10px;
+    /*background-color: #007bff;*/
+    /*color: white;*/
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para el resultado */
+.resultado {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button.nuevo-juego {
+    background-color: #28a745;
+}
+
+button.nuevo-juego:hover {
+    background-color: #1e9333;
+}
+
+/* Estilos para el marcador de puntaje */
+.score {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 5%; /* Estilo responsivo para ajustar el margen izquierdo */
+}
+
+.score-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.score-value {
+    font-weight: normal;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 600px) {
+    .carta {
+        flex-direction: column;
+    }
+
+    .carta img {
+        max-width: 100%; /* Hacer que las cartas ocupen todo el ancho en pantallas pequeñas */
+    }
+}
+
+
+.score-container {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.score {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.score-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.score-button:hover {
+    background-color: #0056b3;
+}

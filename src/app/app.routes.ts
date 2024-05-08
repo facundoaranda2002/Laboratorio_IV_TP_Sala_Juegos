@@ -22,9 +22,17 @@ export const routes: Routes = [
         loadComponent: () => import('./components/error/error.component').then((m) => m.ErrorComponent)
     },
     {
+        path: "mayormenor",
+        loadComponent: () => import('./components/juegos/mayormenor/mayormenor.component').then((m) => m.MayormenorComponent)
+    },
+    {
+        path: "ahorcado",
+        loadComponent: () => import('./components/juegos/ahorcado/ahorcado.component').then((m) => m.AhorcadoComponent)
+    },
+    {
         path: '',
         loadComponent: () => import('./components/home/home.component').then((m) => m.HomeComponent)
-      },
+    },
     {
         path: '**',
         redirectTo: 'error',
