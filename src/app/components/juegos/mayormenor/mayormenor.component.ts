@@ -61,6 +61,10 @@ export class MayormenorComponent {
       this.puntaje++;
     }else {
       this.resultado = 'Incorrecto';
+      if(this.puntaje > 0)
+        {
+          this.puntaje--;
+        }
     }
   }
 
