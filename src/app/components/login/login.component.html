@@ -1,9 +1,7 @@
 <body>
-    <header>
-        <h2>Login</h2>
-    </header>
     <main>
         <form id="login_form" class="form_class" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div><h1>Login</h1></div>
             <div class="form_div">
                 <label>Mail:</label>
                 <input class="field_class" name="login_txt" type="text" formControlName="email" placeholder="Ingrese su mail" autofocus>

@@ -23,22 +23,21 @@ export class ChatComponent {
   fb = inject(FormBuilder);
   authService = inject(FirebaseAuthService);
 
-  estaActivo = true;
+  estaActivo = false;
 
   cambiarEstado() {
     this.estaActivo = !this.estaActivo;
   }
 
-  messages?: Message[] = [
-    {
-      text: 'mensaje',
-      userName: 'Usuario',
-      date: new Date().toDateString(),
-    },
-  ];
+  messages?: Message[] = [];
 
   ngOnInit() {
     this.chat.getAll().subscribe((messages) => {
+      messages.sort((a, b) => {
+        const timestampA = a.dateOrder.seconds * 1000 + a.dateOrder.nanoseconds / 1000000;
+        const timestampB = b.dateOrder.seconds * 1000 + b.dateOrder.nanoseconds / 1000000;
+        return timestampA - timestampB;
+      });
       this.messages = messages;
     });
   }
@@ -60,6 +59,7 @@ export class ChatComponent {
         month: '2-digit',
         year: 'numeric',
       })} - ${fecha.toLocaleTimeString()}`,
+      dateOrder: fecha
     };
 
     this.chat.saveAll(message);

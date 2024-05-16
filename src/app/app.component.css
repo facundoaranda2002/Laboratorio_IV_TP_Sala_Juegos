@@ -1,0 +1,22 @@
+.header {
+    background-color: #dd3434b7;
+    color: white;
+  }
+  
+  .header-buttons {
+    padding: 10px;
+     display: flex;
+     align-items: center;
+  }
+  
+  .header-button {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .spacer {
+    flex-grow: 1;
+  }

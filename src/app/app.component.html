@@ -1,23 +1,23 @@
-<div>
-  <h1>TP SALA DE JUEGOS</h1>
-  <div>
-    <button routerLink="home" class="btn btn-dark m-1">Home</button>
-    <button routerLink="aboutme" class="btn btn-dark m-1">Quien soy</button>
+<header class="header">
+  <div class="header-buttons">
+    <button routerLink="home" class="btn btn-dark m-1 header-button">Home</button>
+    <div class="spacer"></div>
+    <button routerLink="aboutme" class="btn btn-dark m-1 header-button">Quien soy</button>
 
     @if(this.authService.currentUserSig() == null)
     {
-      <button routerLink="login" class="btn btn-dark m-1">Login</button>
-      <button routerLink="registro" class="btn btn-dark m-1">Registro</button>
+      <button routerLink="login" class="btn btn-dark m-1 header-button">Login</button>
+      <button routerLink="registro" class="btn btn-dark m-1 header-button">Registro</button>
     }
     @if(this.authService.currentUserSig())
     {
-      <button (click)="logout()" routerLink="home" class="btn btn-dark m-1">Salir</button>
+      <button (click)="logout()" routerLink="home" class="btn btn-dark m-1 header-button">Salir</button>
     }
   </div>
-</div> 
+</header> 
 
 
 <router-outlet />
 
-<!--<app-chat></app-chat>-->
+<app-chat></app-chat>
 

@@ -30,6 +30,14 @@ export const routes: Routes = [
         loadComponent: () => import('./components/juegos/ahorcado/ahorcado.component').then((m) => m.AhorcadoComponent)
     },
     {
+        path: "preguntados",
+        loadComponent: () => import('./components/juegos/preguntados/preguntados.component').then((m) => m.PreguntadosComponent)
+    },
+    {
+        path: "duckhunt",
+        loadComponent: () => import('./components/juegos/duckhunt/duckhunt.component').then((m) => m.DuckhuntComponent)
+    },
+    {
         path: '',
         loadComponent: () => import('./components/home/home.component').then((m) => m.HomeComponent)
     },

@@ -1,0 +1,33 @@
+<body class="background">
+  <meta charset="utf-8"/>
+  <div class="mainContainer min-100vh">
+    <div class="wrapper">
+      <div class="quiz-container">
+        <div class="quiz-head">
+          <h1 class="quiz-title">Preguntados</h1>
+          <div class="quiz-score">
+            <span>Pregunta: {{ numeroPregunta }} / 10</span>
+          </div>
+          <div class="quiz-score">
+            <span>Puntaje: {{ puntaje }}</span>
+          </div>
+        </div>
+        <div class="quiz-body">
+          <h2 class="quiz-question" id="question">
+            {{ pregunta }}
+          </h2>
+          <ul class="quiz-options">
+            <li (click)="verificarRespuesta('opcion1')">{{ opcionUno }}</li>
+            <li (click)="verificarRespuesta('opcion2')">{{ opcionDos }}</li>
+            <li (click)="verificarRespuesta('opcion3')">{{ opcionTres }}</li>
+          </ul>
+          <div id="result"></div>
+        </div>
+        <div class="quiz-foot" (click)="empezarNuevoJuego()">
+          <button type="button">Empezar de nuevo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+

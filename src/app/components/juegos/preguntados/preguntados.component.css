@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+.min-100vh {
+  min-height: 100vh;
+  background-image: url('../../../../assets/preguntadosbg.jpg');
+  color: #71787e;
+  font-size: 20px;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  padding: 1.5rem 4rem 3rem 4rem;
+  width: 800px;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  position: relative;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 10%);
+  z-index: 1;
+  margin-top: 100px;
+  background-color: #e2f3d7;
+}
+.quiz-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.quiz-score {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+.quiz-score span {
+  color: #0098FF;
+}
+
+.quiz-body {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+  color: black;
+}
+.quiz-options {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quiz-options li {
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  border: 3px solid rgb(148, 189, 52);
+  background-color: rgb(150, 202, 53);
+  color: var(--light-color);
+  box-shadow: 0 4px 0 0 rgb(3, 82, 82);
+  transition: var(--transition);
+  width: 80%;
+}
+.quiz-options li:hover {
+  background-color: #d4dad0;
+  color: black;
+  border-color: #d4dad0;
+  box-shadow: 0 4px 0 0 #bbbbbb;
+}
+.quiz-options li:active {
+  transform: scale(0.97);
+}
+
+.quiz-foot button {
+  background-color: #00000000;
+  border: 2px solid #0098FF;
+  color:  #0098FF;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.quiz-foot button:hover {
+  background-color: #0098FF;
+  color: #fff;
+}
+.quiz-foot button:active {
+  transform: scale(0.95);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+#result {
+  padding: 0.7rem 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+}

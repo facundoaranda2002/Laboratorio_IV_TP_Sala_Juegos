@@ -25,19 +25,18 @@
           </p>
         </div>
       </div>
-
-
-      
-        <form [formGroup]="form" class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()">
+      <div class="card-footer text-body-muted contenedorFooter">
+        <form [formGroup]="form" (ngSubmit)="enviarMensaje()">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Escribe tu mensaje" formControlName="mensaje"/>
+            <input type="text" class="form-control" placeholder="Escribe aqui" formControlName="mensaje"/>
             <button class="input-group-text" id="basic-addon2">
               <img src="assets/send.png" class="imgSend icon-telegram" alt="Send"/>
             </button>
           </div>
         </form>
-      
+      </div>
     </div>
+
     } @else {
     <img
       class="iconoChat"

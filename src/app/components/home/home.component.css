@@ -1,0 +1,31 @@
+body {
+    background-image: url('../../../assets/homebg.jpg');
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Establece la altura del contenedor al 100% del viewport */
+  }
+  
+  .home {
+    margin-bottom: 20px; /* Espacio entre el texto de bienvenida y los botones */
+  }
+  
+  
+  h2 {
+    font-size: 2em; /* Tamaño grande de fuente */
+    color: antiquewhite;
+  }
+  
+  .btn {
+    font-size: 1.5em; /* Tamaño grande de fuente para los botones */
+    padding: 10px 20px; /* Ajusta el padding para hacer los botones más grandes */
+    margin: 10px; /* Espaciado entre los botones */
+  }
+  

@@ -1,56 +1,57 @@
-<meta charset="utf-8" />
-<div style="margin-top: 1%;">
-    <div class="row">
-        <div class="col text-center">
-          <h1 class="text-primary">Ahorcado</h1>
-        </div>
-      </div>
-      
+<body class="background">
+  <meta charset="utf-8" />
+  <div style="margin-top: 0%;">
       <div class="row">
-        <div class="col text-center">
-          <img
-            src="../../../../assets/ahorcado/{{intentos}}.png"
-            class="ahorcado-img"
-            alt="Perdiste!!! Estás Ahorcado!!!"
-            title="Perdiste!!! Estás Ahorcado!!!"
-          />
-          <h3>Intentos: <small>{{intentos}} / 6 </small></h3>
+          <div class="col text-center">
+            <h1 class="text-primary">Ahorcado</h1>
+          </div>
         </div>
-      </div>
-      
-      <div class="row">
-        <div class="col text-center">
-          <h1>{{palabraOculta}}</h1>
+        
+        <div class="row">
+          <div class="col text-center">
+            <img
+              src="../../../../assets/ahorcado/{{intentos}}.png"
+              class="ahorcado-img"
+              alt="Perdiste!!! Estás Ahorcado!!!"
+              title="Perdiste!!! Estás Ahorcado!!!"
+            />
+            <h3>Intentos: <small>{{intentos}} / 6 </small></h3>
+          </div>
         </div>
-      </div>
-      
-      <div class="row" *ngIf="!gano && !perdio">
-        <div class="col text-center">
-          <button
-            (click)="comprobar(letra)"
-            *ngFor="let letra of letras;let i = index"
-            class="btn btn-primary"
-            [disabled]="!botonesHabilitados[i]"
-          >
-            {{letra.toUpperCase()}}
-          </button>
+        
+        <div class="row">
+          <div class="col text-center">
+            <h1>{{palabraOculta}}</h1>
+          </div>
         </div>
-      </div>
+        
+        <div class="row" *ngIf="!gano && !perdio">
+          <div class="col text-center">
+            <button
+              (click)="comprobar(letra)"
+              *ngFor="let letra of letras;let i = index"
+              class="btn btn-primary"
+              [disabled]="!botonesHabilitados[i]"
+            >
+              {{letra.toUpperCase()}}
+            </button>
+          </div>
+        </div>
 
-      <div class="row">
-        <!--
-        <div class="score-container">
-          <div class="score">Score: {{puntaje}}</div>
-          <button class="score-button" (click)="guardarPuntaje()">Guardar Puntaje</button>
+        <div class="row">
+          <!--
+          <div class="score-container">
+            <div class="score">Score: {{puntaje}}</div>
+            <button class="score-button" (click)="guardarPuntaje()">Guardar Puntaje</button>
+          </div>
+          -->
+          <div class="col-12">
+            <button (click)="empezarNuevoJuego()" class="btn btn-warning">Jugar de nuevo</button>
+          </div>
         </div>
-        -->
-        <div class="col-12">
-          <button (click)="empezarNuevoJuego()" class="btn btn-warning">Jugar de nuevo</button>
-        </div>
-      </div>
 
 
-</div>
-
+  </div>
+</body>
 
   

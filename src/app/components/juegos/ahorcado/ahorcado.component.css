@@ -1,3 +1,10 @@
+.background {
+  background-image: url('../../../../assets/ahorcadobg.jpg');
+  background-size: contain; /* Ajusta la imagen para que cubra todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: repeat; /* Evita que la imagen se repita */
+}
+
 div {
     text-align: center;
   }

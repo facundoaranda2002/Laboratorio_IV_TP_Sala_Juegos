@@ -1,13 +1,27 @@
-@if(this.authService.currentUserSig())
-  {
-    <h2>Bienvenido {{this.authService.currentUserSig()?.username}}</h2>
-    <button routerLink="/mayormenor" class="btn btn-dark m-1">Mayor Menor</button>
-    <button routerLink="/ahorcado" class="btn btn-dark m-1">Ahorcado</button>
+<body>
+  <div class="container">
+    @if(this.authService.currentUserSig())
+    {
+      <div class="home">
+        <h2>Bienvenido {{this.authService.currentUserSig()?.username}}</h2>
+      </div>
+      <div class="buttons">
+        <button routerLink="/mayormenor" class="btn btn-dark m-1">Mayor Menor</button>
+        <button routerLink="/ahorcado" class="btn btn-dark m-1">Ahorcado</button>
+        <button routerLink="/preguntados" class="btn btn-dark m-1">Preguntados</button>
+        <button routerLink="/duckhunt" class="btn btn-dark m-1">Duck Hunt</button>
+      </div>
+      
+    }
+    @else {
+      <div class="home">
+        <h2>Bienvenido</h2>
+      </div>
+    }
+  </div>
+  
+</body>
 
-  }
-  @else {
-    <h2>Bienvenido</h2>
-  }
 
 
 

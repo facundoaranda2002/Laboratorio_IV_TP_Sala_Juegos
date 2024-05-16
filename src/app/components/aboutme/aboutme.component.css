@@ -1,0 +1,34 @@
+.about-me-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  background: url(https://www.djmathtutoring.ca/wp-content/uploads/2015/12/about-me-background.jpg);
+}
+
+.about-me-left,
+.about-me-right,
+.about-me-image {
+  width: calc(33.33% - 20px); /* Tamaño de cada columna, con espacio entre ellas */
+  padding: 20px;
+  box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 1.2rem;
+}
+
+.about-me-left h2,
+.about-me-right h2 {
+    font-size: 2rem;
+    margin: 2.2rem 0 0.6rem 0;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #edffec;
+}
+
+.about-me-image img {
+  display: block; /* Asegura que la imagen no tenga espacio extra debajo */
+  margin: 0 auto; /* Centra horizontalmente la imagen */
+  max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  height: auto;
+  border-radius: 10%;
+}
