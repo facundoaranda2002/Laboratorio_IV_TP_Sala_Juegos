@@ -1,7 +1,6 @@
-<body class="background">
-  <div class="container" style="margin-top: 0%;">
+<div class="background">
+  <div class="container">
       <h1 class="text-primary">Mayor o Menor</h1>
-      <br>
       <div class="carta">
         <img [src]="obtenerRutaImagen(cartaSiguiente)" alt="{{ cartaSiguiente?.numero }} de {{ cartaSiguiente?.palo }}">
         <!--<img src='../../../../assets/mayormenor/reverso.png' alt="{{ cartaActual?.numero }} de {{ cartaActual?.palo }}">-->
@@ -12,19 +11,23 @@
         <button class="score-button" (click)="guardarPuntaje()">Guardar Puntaje</button>
       </div>
       -->
-      <div>
-        <br>
-        <h2 class="text-primary">¿La siguiente carta será menor(<), igual(=) o mayor(>)?</h2>
+      <div *ngIf="resultado !== 'Incorrecto'" class="pepe" >
+        <h2 class="text-maymen">¿La siguiente carta será menor(<), igual(=) o mayor(>)?</h2>
         <button class="btn btn-warning" (click)="verificarAdivinanza('MENOR')"><</button>
         <button class="btn btn-warning" (click)="verificarAdivinanza('IGUAL')">=</button>
         <button class="btn btn-warning" (click)="verificarAdivinanza('MAYOR')">></button>
+      </div>
+      <div *ngIf="resultado === 'Incorrecto'" class="pepe" >
+        <div class="col-12 reset">
+          <button (click)="empezarNuevoJuego()" class="btn btn-warning">Jugar de nuevo</button>
+        </div>
       </div>
       <div *ngIf="resultado !== ''">
         <h2 *ngIf="resultado === 'Incorrecto'" style="color: #fe655c;">Resultado: {{ resultado }}</h2>
         <h2 *ngIf="resultado === 'Correcto'" style="color: green;">Resultado: {{ resultado }}</h2>
       </div>
       <div>
-        <h3>Puntaje: {{puntaje}}</h3>
+        <h3><span>Puntaje: {{puntaje}}</span> <span style="margin-left: 20px;">Objetivo: 10</span></h3>
       </div>
   </div>
-</body>
+</div>

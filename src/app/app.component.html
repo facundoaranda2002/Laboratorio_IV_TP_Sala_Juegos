@@ -1,23 +1,24 @@
-<header class="header">
+<div class="header-a">
   <div class="header-buttons">
-    <button routerLink="home" class="btn btn-dark m-1 header-button">Home</button>
-    <div class="spacer"></div>
-    <button routerLink="aboutme" class="btn btn-dark m-1 header-button">Quien soy</button>
-
     @if(this.authService.currentUserSig() == null)
     {
+      <div class="spacer"></div>
+      <button routerLink="aboutme" class="btn btn-dark m-1 header-button">Quien soy</button>
       <button routerLink="login" class="btn btn-dark m-1 header-button">Login</button>
       <button routerLink="registro" class="btn btn-dark m-1 header-button">Registro</button>
     }
     @if(this.authService.currentUserSig())
     {
-      <button (click)="logout()" routerLink="home" class="btn btn-dark m-1 header-button">Salir</button>
+      <button routerLink="home" class="btn btn-dark m-1 header-button">Home</button>
+      <div class="spacer"></div>
+      <button routerLink="aboutme" class="btn btn-dark m-1 header-button">Quien soy</button>
+      <button (click)="logout()" routerLink="login" class="btn btn-dark m-1 header-button">Salir</button>
     }
   </div>
-</header> 
+</div> 
 
 
-<router-outlet />
+<router-outlet/>
 
 <app-chat></app-chat>
 

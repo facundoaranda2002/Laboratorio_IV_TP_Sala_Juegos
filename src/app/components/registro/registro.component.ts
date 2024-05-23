@@ -27,7 +27,9 @@ export class RegistroComponent {
   {
     this.authService.register(this.email,this.username,this.password).subscribe({
       next:()=>{
-      this.router.navigateByUrl('/')},
+        this.router.navigateByUrl('/home');
+        setTimeout(()=>{window.location.reload()}, 1000);
+    },
       error: ()=>{
         this.errorMessage = 'Credenciales invalidas o mail ya registrado';
       }

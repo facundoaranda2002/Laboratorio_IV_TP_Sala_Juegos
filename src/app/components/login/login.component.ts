@@ -34,7 +34,7 @@ export class LoginComponent {
     const value = this.form.getRawValue();
     this.authService.login(value.email, value.password).subscribe({
       next:()=>{
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/home');
       let log: LogInterface = {email: value.email, date: new Date()};
       this.storage.saveAll(log);
       },

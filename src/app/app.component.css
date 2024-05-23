@@ -1,12 +1,15 @@
-.header {
-    background-color: #dd3434b7;
+.header-a {
+    background-color: rgb(136, 28, 28);
     color: white;
+    position: absolute;
+    width: 100%;
   }
   
   .header-buttons {
     padding: 10px;
      display: flex;
      align-items: center;
+  
   }
   
   .header-button {

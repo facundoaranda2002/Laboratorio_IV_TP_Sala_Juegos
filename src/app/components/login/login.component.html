@@ -1,28 +1,27 @@
-<body>
-    <main>
-        <form id="login_form" class="form_class" [formGroup]="form" (ngSubmit)="onSubmit()">
-            <div><h1>Login</h1></div>
-            <div class="form_div">
-                <label>Mail:</label>
-                <input class="field_class" name="login_txt" type="text" formControlName="email" placeholder="Ingrese su mail" autofocus>
-                <label>Password:</label>
-                <input id="pass" class="field_class" name="password_txt" type="password" formControlName="password" placeholder="Ingrese su contraseña">
-                <button class="submit_class" type="submit" form="login_form">Entrar</button>
-            </div>
-            <div *ngIf="errorMessage" class="error-message">
-                <p>{{ errorMessage }}</p>
-            </div>
-            <div class="info_div">
-                <p>Todavia no esta registrado? <a routerLink="/registro">Unete!</a></p>
-            </div>
-        </form>
-        <h3>Usuarios pre registrados</h3>
-        <div>
-            <button class="btn_default" (click)="userA()">Usuario 1</button>
-            <button class="btn_default" (click)="userB()">Usuario 2</button>
-            <button class="btn_default" (click)="userC()">Usuario 3</button>
-        </div>
-    </main>
-</body>
 
-<router-outlet/>
+<div class="container-a">
+    <form id="login_form" class="form_class" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div><h1>Login</h1></div>
+        <div class="form_div">
+            <label>Mail:</label>
+            <input class="field_class" name="login_txt" type="text" formControlName="email" placeholder="Ingrese su mail" autofocus>
+            <label>Password:</label>
+            <input id="pass" class="field_class" name="password_txt" type="password" formControlName="password" placeholder="Ingrese su contraseña">
+            <button class="submit_class" type="submit" form="login_form">Entrar</button>
+        </div>
+        <div *ngIf="errorMessage" class="error-message">
+            <p>{{ errorMessage }}</p>
+        </div>
+        <div class="info_div">
+            <p>Todavia no esta registrado? <a routerLink="/registro">Unete!</a></p>
+        </div>
+    </form>
+    <h3>Usuarios pre registrados</h3>
+    <div>
+        <button class="btn_default" (click)="userA()">Usuario 1</button>
+        <button class="btn_default" (click)="userB()">Usuario 2</button>
+        <button class="btn_default" (click)="userC()">Usuario 3</button>
+    </div>
+</div>
+
+

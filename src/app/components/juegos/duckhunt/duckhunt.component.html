@@ -1,12 +1,21 @@
-<div style="text-align:center" class="background">
-    <button (click)="startPause()" width="200">{{ running ? 'Pausa' : 'Empezar' }}</button>
-    <button (click)="reset()">Reiniciar</button>
-    <p>Nivel {{this.gameLevel.current}}<span *ngIf="running"> (Objetivos restantes: {{targets.length}})</span>
-        <br/>
-        <small style="color: red">Haz click para disparar</small>
-    </p>
-    <canvas #canvasScene width="640" height="480" (mousedown)="onMouseClick($event)"></canvas>
-    <div>
-        <h3>Puntaje: {{this.puntaje}}</h3>
+<div class="background">
+    <div class="container" style="text-align:center">
+        <button *ngIf="!running && timeRemaining > 0 && completedLevels < 3" (click)="startPause()" width="200">{{ running ? 'Pausa' : 'Empezar' }}</button>
+        <button *ngIf="running || this.gameLevel.current==4 || this.perdio == true" (click)="reset()">Reiniciar</button>
+        <p class="reset"*ngIf="this.gameLevel.current<4">Nivel {{this.gameLevel.current}}/3<span *ngIf="running"> (Objetivos restantes: {{targets.length}})</span>
+            <br/>
+            <small class="reset" style="color: red">Tiempo restante: {{ timeRemaining / 1000 }}s</small>
+        </p>
+        <p class="reset" *ngIf="this.gameLevel.current==4">Nivel 3/3<span *ngIf="running"> (Objetivos restantes: {{targets.length}})</span>
+            <br/>
+            <small class="reset" style="color: red">Tiempo restante: {{ timeRemaining / 1000 }}s</small>
+        </p>
+        <canvas #canvasScene width="640" height="480" (mousedown)="onMouseClick($event)"></canvas>
+        <!--
+        <div>
+            <h3 class="reset">Puntaje: {{this.puntaje}}</h3>
+        </div>
+        -->
+        
     </div>
 </div>

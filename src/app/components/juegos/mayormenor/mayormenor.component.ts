@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 //import { PuntajesService } from 'src/app/services/puntajes.service';
 import Swal from 'sweetalert2';
 import { Carta } from  '../../../interfaces/carta';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mayormenor',
@@ -19,6 +20,7 @@ export class MayormenorComponent {
   resultado?: string;
   puntaje : number = 0;
   juego = "MayorMenor";
+  router = inject(Router);
 
   //constructor(private puntajeService:PuntajesService) { } Esta es la forma vieja
   //puntajeService = inject(PuntajesService);
@@ -59,12 +61,20 @@ export class MayormenorComponent {
         (opcion === 'IGUAL' && this.cartaActual &&  this.cartaSiguiente.numero === this.cartaActual.numero)) {
       this.resultado = 'Correcto';
       this.puntaje++;
+      if(this.puntaje==10)
+        {
+          Swal.fire({
+            icon: 'success',
+            title: 'Felicidades, ganaste!!!'
+          })
+        }
     }else {
       this.resultado = 'Incorrecto';
-      if(this.puntaje > 0)
-        {
-          this.puntaje--;
-        }
+      Swal.fire({
+        icon: 'error',
+        title: 'Perdiste, intentalo nuevamente!',
+      })
+      
     }
   }
 
@@ -79,4 +89,8 @@ export class MayormenorComponent {
     this.puntaje = await this.puntajeService.guardarPuntaje(this.puntaje,this.juego);
   }
   */
+
+  empezarNuevoJuego(){
+    this.router.navigateByUrl('/refreshMayorMenor', {skipLocationChange: true}).then(()=> this.router.navigate(["mayormenor"]));
+  }
 }

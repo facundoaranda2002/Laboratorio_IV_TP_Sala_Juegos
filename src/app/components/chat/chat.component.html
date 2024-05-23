@@ -38,10 +38,11 @@
     </div>
 
     } @else {
-    <img
-      class="iconoChat"
-      src="assets/chat.png"
-      alt=""
-      (click)="cambiarEstado()"
-    />
+      <div class="container-chat-img" (click)="cambiarEstado()">
+        <img
+        class="iconoChat"
+        src="assets/chat.png"
+        alt=""
+        />
+      </div>
     } }

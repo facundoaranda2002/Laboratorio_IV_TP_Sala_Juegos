@@ -89,20 +89,53 @@ export class PreguntadosComponent implements OnInit{
       this.numeroPregunta++;
       this.indiceActual++;
       this.pasarProximaPregunta();
-    } else {
-      Swal.fire({
-        icon: 'success',
-        title: '¡Quiz Terminado!',
-        text: 'Puntos ganados: ' + this.puntaje,
-        confirmButtonText: 'OK',
-      }).then(() => {
-        
-        this.guardarPuntaje().then(() => {
-          window.location.reload();
+    } else
+    {
+      if(this.puntaje>=6){
+        Swal.fire({
+          icon: 'success',
+          title: '¡Promocionaste!',
+          text: 'Respuestas correctas: ' + this.puntaje,
+          confirmButtonText: 'OK',
+        }).then(() => {
+          
+          this.guardarPuntaje().then(() => {
+            window.location.reload();
+          });
+          
         });
-        
-      });
-    }
+      }
+      else if(this.puntaje<4)
+        {
+          Swal.fire({
+            icon: 'error',
+            title: 'Desaprobaste, Intentalo de nuevo',
+            text: 'Respuestas correctas: ' + this.puntaje,
+            confirmButtonText: 'OK',
+          }).then(() => {
+            
+            this.guardarPuntaje().then(() => {
+              window.location.reload();
+            });
+            
+          });
+        }
+        else
+        {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Aprobaste',
+            text: 'Respuestas correctas: ' + this.puntaje,
+            confirmButtonText: 'OK',
+          }).then(() => {
+            
+            this.guardarPuntaje().then(() => {
+              window.location.reload();
+            });
+            
+          });
+        }
+    } 
   }
 
   empezarNuevoJuego() {

@@ -6,17 +6,23 @@
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-.container {
+.container{
     text-align: center;
 
-    max-width: 800px; /* Establece un ancho máximo para el contenedor */
+    max-width: 100%; /* Establece un ancho máximo para el contenedor */
 
-    padding: 10px;
+    padding: 0px;
+
+    margin-top: 0%;
+
+    padding-top: 60px;
+
+    min-height: 100vh;
 }
 
-h3
+h1,h3
 {
-    color: antiquewhite;
+    color: antiquewhite !important;
 }
 
 /* Estilos para la carta */
@@ -32,15 +38,14 @@ h3
     max-height: 300px;
     border: 2px solid #333;
     border-radius: 10px;
-    margin-bottom: 20px;
-    margin: 5px; /* Estilo responsivo para separar las cartas en pantallas pequeñas */
+    margin-bottom: 5px;
 }
 
 /* Estilos para los botones */
 button.btn {
-    font-size: 40px;
-    padding: 10px 20px;
-    margin: 10px;
+    font-size: 30px;
+    padding: 5px 20px;
+    margin: 5px;
     /*background-color: #007bff;*/
     /*color: white;*/
     border: none;
@@ -123,4 +128,23 @@ button.nuevo-juego:hover {
 
 .score-button:hover {
     background-color: #0056b3;
+}
+
+.text-maymen
+{
+    color: white;
+    width: 100%;
+    font-size: 30px;
+}
+
+.pepe
+{
+    width: 100%;
+    margin: 0px;
+}
+
+.reset
+{
+  margin: 0px !important;
+  padding: 0px !important;
 }

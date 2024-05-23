@@ -1,19 +1,19 @@
-<body>
-    <main>
-        <form id="login_form" class="form_class">
-            <div><h1>Registro</h1></div>
-            <div class="form_div">
-                <label>Username:</label>
-                <input class="field_class" name="login_txt" type="text" [(ngModel)]="username" placeholder="Ingrese nombre de usuario" autofocus>
-                <label>Mail:</label>
-                <input class="field_class" name="login_txt" type="text" [(ngModel)]="email" placeholder="Ingrese mail" autofocus>
-                <label>Password:</label>
-                <input id="pass" class="field_class" name="password_txt" type="password"  [(ngModel)]="password" placeholder="Ingrese contraseña">
-                <button class="submit_class" type="submit" form="login_form" (click)="onSubmit()">Entrar</button>
-                <div *ngIf="errorMessage" class="error-message">
-                    <p>{{ errorMessage }}</p>
-                </div>
+<div class="container-a">
+    
+    <form id="login_form" class="form_class">
+        <div><h1>Registro</h1></div>
+        <div class="form_div">
+            <label>Username:</label>
+            <input class="field_class" name="login_txt" type="text" [(ngModel)]="username" placeholder="Ingrese nombre de usuario" autofocus>
+            <label>Mail:</label>
+            <input class="field_class" name="login_txt" type="text" [(ngModel)]="email" placeholder="Ingrese mail" autofocus>
+            <label>Password:</label>
+            <input id="pass" class="field_class" name="password_txt" type="password"  [(ngModel)]="password" placeholder="Ingrese contraseña">
+            <button class="submit_class" type="submit" form="login_form" (click)="onSubmit()">Entrar</button>
+            <div *ngIf="errorMessage" class="error-message">
+                <p>{{ errorMessage }}</p>
             </div>
-        </form>
-    </main>
-</body>
+        </div>
+    </form>
+    
+</div>

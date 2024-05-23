@@ -2,9 +2,6 @@
     padding: 0px;
     margin: 0px;
 }
-body {
-    background-color: lightgreen;
-}
 header {
     background-color: black;
     color: white;
@@ -20,13 +17,14 @@ h1 {
     text-transform: uppercase;
     text-align: center;
 }
-main {
+.container-a
+{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 75vh;
-    width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100% !important;
     background: url(https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70070000013765/01e3c858023ec84405cafda54e8995f8d0cbc89dc97bb20008bb57ea06ef7e97) no-repeat center center;
     background-size: cover;
 }
@@ -37,6 +35,7 @@ main {
     background-color: white;
     font-family: 'system-ui';
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+    margin-top: 50px;
 }
 .form_div {
     text-transform: uppercase;

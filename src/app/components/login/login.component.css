@@ -2,9 +2,6 @@
     padding: 0px;
     margin: 0px;
 }
-body {
-    background-color: lightgreen;
-}
 header {
     color: white;
     display: flex;
@@ -23,24 +20,24 @@ h3
 {
     color: #f8d7da;
 }
-main {
+.container-a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 75vh;
-    width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100% !important;
     background: url(https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70070000013765/01e3c858023ec84405cafda54e8995f8d0cbc89dc97bb20008bb57ea06ef7e97) no-repeat center center;
     background-size: cover;
 }
 .form_class {
     width: 500px;
-    padding: 40px;
+    padding: 20px;
     border-radius: 8px;
     background-color: white;
     font-family: 'system-ui';
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+    margin-top: 50px;
 }
 .form_div {
     text-transform: uppercase;
@@ -83,27 +80,8 @@ main {
     box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
     cursor: pointer;
 }
-footer {
-    height: 10vh;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: -5px -5px 10px rgb(0,0,0,0.3);
-}
-footer > p {
-    text-align: center;
-    font-family: 'system-ui';
-    letter-spacing: 3px;
-}
-footer > p > a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
 .btn_default {
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 10px;
     padding: 10px;
     background-color: white;
@@ -111,9 +89,8 @@ footer > p > a {
 .error-message {
     background-color: #f8d7da; /* Color de fondo rojo claro */
     color: #721c24; /* Color del texto rojo oscuro */
-    padding: 10px; /* Espaciado interno */
+    padding: 5px; /* Espaciado interno */
     border: 1px solid #f5c6cb; /* Borde rojo claro */
     border-radius: 5px; /* Bordes redondeados */
-    margin-bottom: 10px; /* Espacio inferior */
     margin-top: 10px;
 }

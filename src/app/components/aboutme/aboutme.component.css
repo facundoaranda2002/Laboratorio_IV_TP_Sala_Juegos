@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: flex-start; /* Alinea los elementos en la parte superior */
   background: url(https://www.djmathtutoring.ca/wp-content/uploads/2015/12/about-me-background.jpg);
+  min-height: 100vh;
 }
 
 .about-me-left,
@@ -13,7 +14,7 @@
   box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
   font-weight: 400;
   letter-spacing: 2px;
-  margin-top: 1.2rem;
+  margin-top: 2.0rem;
 }
 
 .about-me-left h2,
@@ -31,4 +32,5 @@
   max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
   height: auto;
   border-radius: 10%;
+  margin-top: 20px;
 }
