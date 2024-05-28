@@ -144,7 +144,7 @@ export class AhorcadoComponent {
       Swal.fire({
         icon: 'success',
         title: 'Ganaste!!!',
-        text: "Puntos: "+this.palabra.length
+        //text: "Puntos: "+ this.palabra.length
       })
       this.puntaje += this.palabra.length;
     }

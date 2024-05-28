@@ -11,10 +11,10 @@
       </div>
 
 
-      <div class="card-body">
-        <div data-bs-spy="scroll" class="contenedorMensajes">
+      <div class="card-body" id="contenedorDeMensajes">
           <p
             *ngFor="let message of messages"
+            class="chat"
             [ngClass]="this.authService.currentUserSig()?.username === message.userName? 'enviado': 'recibido'"
           >
             <span id="userNameSpan">{{message.userName}}</span>
@@ -23,7 +23,6 @@
             <br>
             <span> {{ message.date }} </span>
           </p>
-        </div>
       </div>
       <div class="card-footer text-body-muted contenedorFooter">
         <form [formGroup]="form" (ngSubmit)="enviarMensaje()">

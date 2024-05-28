@@ -164,6 +164,8 @@ export class DuckhuntComponent implements OnInit, OnDestroy{
         text: '¡Has ganado el juego!',
         icon: 'success',
         confirmButtonText: 'Aceptar'
+      }).then(() => {
+        window.location.reload();
       });
     } else {
       setTimeout(() => {
@@ -192,6 +194,8 @@ export class DuckhuntComponent implements OnInit, OnDestroy{
             text: 'Llegaste al nivel ' + this.puntaje,
             icon: 'warning',
             confirmButtonText: 'Aceptar'
+          }).then(() => {
+            window.location.reload();
           });
         }
       }, 1000);

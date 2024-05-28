@@ -10,6 +10,7 @@ import { FirebaseChatService } from '../../services/firebase-chat.service';
 import { Message } from '../../interfaces/message';
 import { CommonModule, NgFor } from '@angular/common';
 import { FirebaseAuthService } from '../../services/firebase-auth-service.service';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-chat',
@@ -22,11 +23,15 @@ export class ChatComponent {
   chat = inject(FirebaseChatService);
   fb = inject(FormBuilder);
   authService = inject(FirebaseAuthService);
+  cdr = inject(ChangeDetectorRef);
 
   estaActivo = false;
 
   cambiarEstado() {
     this.estaActivo = !this.estaActivo;
+    if (this.estaActivo) {
+      setTimeout(() => this.scrollToTheLastElementByClassName(), 100);
+    }
   }
 
   messages?: Message[] = [];
@@ -39,6 +44,8 @@ export class ChatComponent {
         return timestampA - timestampB;
       });
       this.messages = messages;
+      this.cdr.detectChanges();
+      this.scrollToTheLastElementByClassName();
     });
   }
 
@@ -48,6 +55,11 @@ export class ChatComponent {
 
   enviarMensaje() {
     const value = this.form.getRawValue();
+
+    if (!value.mensaje.trim()) {
+      // No enviar mensaje si está vacío
+      return;
+    }
 
     let fecha = new Date();
 
@@ -64,5 +76,16 @@ export class ChatComponent {
 
     this.chat.saveAll(message);
     this.form.setValue({ mensaje: '' });
+    setTimeout(() => {
+      this.scrollToTheLastElementByClassName();
+    }, 100);
   }
+
+  scrollToTheLastElementByClassName() {
+    const container = document.getElementById("contenedorDeMensajes");
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
+  }
+
 }
