@@ -61,7 +61,7 @@ export class MayormenorComponent {
         (opcion === 'IGUAL' && this.cartaActual &&  this.cartaSiguiente.numero === this.cartaActual.numero)) {
       this.resultado = 'Correcto';
       this.puntaje++;
-      if(this.puntaje==10)
+      if(this.puntaje==5)
         {
           Swal.fire({
             icon: 'success',
