@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
-Link Firebase: tp2024-1ed38.firebaseapp.com
+Link Firebase: https://tp2024-1ed38.firebaseapp.com
 
 ## Development server
 
